@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Ballast — cut LLM costs without losing answer quality</title>
-<meta name="description" content="Ballast builds Cachet: a self-hosted, drop-in gateway that cuts LLM spend with semantic caching and quality-gated routing — production-hardened and proven to preserve answer quality." />
+<meta name="description" content="Cachet by Ballast: a self-hosted control plane for LLM traffic — cuts spend with semantic caching and quality-gated routing, plus budgets, PII guardrails, and continuous quality monitoring. Production-hardened." />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <!-- Company: Ballast. Product: Cachet. Fill remaining [bracketed] placeholders
      (contact email, domain) before publishing. -->
@@ -253,6 +253,34 @@
     <p class="fine">Honest notes: savings depend on your traffic mix (high-repeat traffic saves
       more via cache; substantive long-form via routing). Quality figures are specific to the
       stated bar and judge. Full methodology available on request.</p>
+  </section>
+
+  <section id="controlplane">
+    <div class="eyebrow">More than savings</div>
+    <h2>The control plane for your LLM traffic</h2>
+    <p class="lead">Every prompt already flows through Cachet — so every concern about that
+      traffic becomes one place to manage it. You land with cost savings and get governance,
+      safety, and quality assurance in the same gateway.</p>
+    <div class="grid3">
+      <div class="card">
+        <div class="k">Cost governance</div>
+        <h3>Budgets &amp; attribution</h3>
+        <p>See exactly which team or app is spending what, set monthly budgets with alerts, and
+          cap spend with a hard limit — no more surprise LLM bills.</p>
+      </div>
+      <div class="card">
+        <div class="k">Guardrails &amp; compliance</div>
+        <h3>PII never leaves</h3>
+        <p>Detect and redact sensitive data (emails, SSNs, cards) before a prompt reaches any
+          model — or block it outright. Every action is audit-logged.</p>
+      </div>
+      <div class="card">
+        <div class="k">Quality assurance</div>
+        <h3>Catch regressions</h3>
+        <p>Continuous "is the cheap model still good enough?" checks with a quality floor and
+          alerts — so cost savings can never silently degrade your answers.</p>
+      </div>
+    </div>
   </section>
 
   <section id="production">
