@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Ballast — cut LLM costs without losing answer quality</title>
-<meta name="description" content="Ballast builds Cachet: a drop-in gateway that cuts LLM spend with semantic caching and quality-gated routing — and proves answer quality is preserved." />
+<meta name="description" content="Ballast builds Cachet: a self-hosted, drop-in gateway that cuts LLM spend with semantic caching and quality-gated routing — production-hardened and proven to preserve answer quality." />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <!-- Company: Ballast. Product: Cachet. Fill remaining [bracketed] placeholders
      (contact email, domain) before publishing. -->
@@ -255,6 +255,51 @@
       stated bar and judge. Full methodology available on request.</p>
   </section>
 
+  <section id="production">
+    <div class="eyebrow">Production-ready</div>
+    <h2>Built to run in production — inside your environment</h2>
+    <p class="lead">Cachet is <strong>self-hosted</strong>: it runs in your own infrastructure, so your
+      prompts never leave your boundary. It's hardened, observable, and tested — not a prototype.</p>
+    <div class="grid3">
+      <div class="card">
+        <div class="k">Self-hosted</div>
+        <h3>Your data stays yours</h3>
+        <p>Runs in your environment via Docker. Prompts and responses never leave your boundary —
+          ideal for sensitive or regulated data.</p>
+      </div>
+      <div class="card">
+        <div class="k">Reliable</div>
+        <h3>Survives provider hiccups</h3>
+        <p>Per-provider timeouts and circuit breakers with automatic failover to a backup model — a
+          slow or down provider can't take your app down.</p>
+      </div>
+      <div class="card">
+        <div class="k">Observable</div>
+        <h3>Full visibility</h3>
+        <p>Prometheus metrics, structured request logs with request IDs, and health/readiness
+          probes — drops straight into your monitoring stack.</p>
+      </div>
+      <div class="card">
+        <div class="k">Secure</div>
+        <h3>Locked down by default</h3>
+        <p>API-key auth, per-key rate limiting, and input validation built in. In production it
+          refuses to start without a key.</p>
+      </div>
+      <div class="card">
+        <div class="k">Tested</div>
+        <h3>Verified, not vibes</h3>
+        <p>An automated unit + integration test suite runs on every change in CI, and the container
+          image build is verified in the cloud.</p>
+      </div>
+      <div class="card">
+        <div class="k">Drop-in</div>
+        <h3>One base-URL change</h3>
+        <p>OpenAI-compatible API — point your existing client at Cachet and you're live, with no SDK
+          changes.</p>
+      </div>
+    </div>
+  </section>
+
   <section id="who">
     <div class="eyebrow">Who it's for</div>
     <h2>Built for AI product teams</h2>
@@ -272,7 +317,7 @@
       <ul class="clean">
         <li>No savings, no fee — incentives aligned</li>
         <li>Measured against your real traffic, with a quality floor you set</li>
-        <li>Self-hosted / VPC option for regulated data (on the roadmap)</li>
+        <li>Self-hosted — runs in your environment; prompts never leave your boundary</li>
       </ul>
       <p class="fine center" style="margin:18px auto 0">Design-partner pricing is custom while we onboard our first cohort.</p>
     </div>
@@ -281,9 +326,10 @@
   <section id="trust">
     <div class="eyebrow">Trust &amp; data</div>
     <h2>We sit in your request path — we treat it seriously</h2>
-    <p class="lead">Your prompts are only retained in the cache you control; we don't train on your
-      data; a pilot data-processing agreement is available. We're early-stage and transparent about
-      it — formal certifications (e.g. SOC 2) are on the roadmap, not yet in place.
+    <p class="lead">Because Cachet is self-hosted, your prompts never leave your environment — they're
+      only retained in the cache you control, and we don't train on your data. A pilot
+      data-processing agreement is available. We're early-stage and transparent about it — formal
+      certifications (e.g. SOC 2) are on the roadmap, not yet in place.
       <a href="#contact" style="color:var(--blue)">Ask for our security overview.</a></p>
   </section>
 
@@ -297,11 +343,13 @@
       <dd>No — a reranker confirms true equivalence before any cache hit, and we measure the
         false-hit rate (near zero in our benchmark).</dd>
       <dt>What stage is the product?</dt>
-      <dd>Working product with audited results, onboarding design partners. We're upfront that
-        production hardening (multi-tenancy, SLAs, certifications) is in progress.</dd>
+      <dd>A working, audited product that's now self-hosted and production-hardened — Docker deploy,
+        automated tests in CI, plus reliability (failover, circuit breakers) and observability
+        (metrics, structured logs) built in. We're onboarding design partners; we're upfront that
+        formal certifications (e.g. SOC 2) are still ahead of us.</dd>
       <dt>Which models do you support?</dt>
-      <dd>Provider-agnostic by design — premium and low-cost tiers are configurable. Multi-provider
-        failover is on the roadmap.</dd>
+      <dd>Provider-agnostic by design — premium and low-cost tiers are configurable, with automatic
+        failover between them built in.</dd>
     </dl>
   </section>
 
