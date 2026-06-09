@@ -208,12 +208,13 @@
   </header>
 
   <div class="stats">
-    <div class="stat"><div class="n g mono">~81%</div><div class="l">lower LLM cost vs. all-premium</div></div>
-    <div class="stat"><div class="n mono">97.4%</div><div class="l">answers correct &amp; helpful</div></div>
+    <div class="stat"><div class="n g mono">~65%</div><div class="l">lower LLM cost via routing</div></div>
+    <div class="stat"><div class="n mono">~89%</div><div class="l">answers correct &amp; helpful</div></div>
     <div class="stat"><div class="n">Measured</div><div class="l">proven by an independent judge, not promised</div></div>
   </div>
-  <div class="fine">Audited on a 38-question support benchmark, 10 runs, graded by an independent
-    Claude Opus judge on a "correct &amp; helpful" bar. Results vary by traffic — see methodology.</div>
+  <div class="fine">Measured on a 547-question support benchmark, graded by an independent
+    Claude Opus judge on a "correct &amp; helpful" bar. Routing alone cuts cost ~65%; with repeat
+    traffic, the cache pushes blended savings past 80%. Results vary by traffic — see methodology.</div>
 
   <section id="problem">
     <div class="eyebrow">The problem</div>
@@ -253,24 +254,26 @@
   <section id="proof">
     <div class="eyebrow">The proof</div>
     <h2>Measured, not promised</h2>
-    <p class="lead">Audit-grade benchmark — 38 support-style questions, 10 runs, graded by an
-      independent Claude Opus judge on a "correct &amp; helpful to the user" standard.</p>
+    <p class="lead">Independent benchmark — 547 support-style questions, graded by a
+      Claude Opus judge on a "correct &amp; helpful to the user" standard.</p>
     <table>
-      <tr><th>Metric</th><th>Result</th><th>Range (10 runs)</th></tr>
-      <tr><td>Net cost savings vs. all-premium</td><td class="v">~81%</td><td class="r">72–87%</td></tr>
-      <tr><td>Answer quality (correct &amp; helpful)</td><td class="v">97.4%</td><td class="r">stable</td></tr>
-      <tr><td>Answers worse than premium</td><td class="v">2.6%</td><td class="r">—</td></tr>
+      <tr><th>Metric</th><th>Result</th><th>Basis</th></tr>
+      <tr><td>Cost savings via routing (vs. all-premium)</td><td class="v">~65%</td><td class="r">all-unique traffic</td></tr>
+      <tr><td>Blended savings with cache</td><td class="v">80%+</td><td class="r">repeat traffic</td></tr>
+      <tr><td>Answer quality (correct &amp; helpful)</td><td class="v">~89%</td><td class="r">Opus-judged</td></tr>
+      <tr><td>Answers worse than premium</td><td class="v">~7%</td><td class="r">—</td></tr>
     </table>
-    <p class="fine">Honest notes: savings depend on your traffic mix (high-repeat traffic saves
-      more via cache; substantive long-form via routing). Quality figures are specific to the
-      stated bar and judge. Full methodology available on request.</p>
+    <p class="fine">Honest notes: ~65% is cost-routing alone on all-unique traffic (the worst
+      case); cached repeats are free, so blended savings climb past 80% as traffic repeats.
+      Quality is specific to the stated bar and judge. Full methodology available on request.</p>
   </section>
 
   <section id="savings">
     <div class="eyebrow">Annual impact</div>
-    <h2>What ~80% off your LLM bill is worth in a year</h2>
+    <h2>What cutting your LLM bill 65–80% is worth in a year</h2>
     <p class="lead">LLM spend is recurring and grows with usage, so the savings compound. Enter your
-      monthly LLM bill to see the annualized impact at our measured reduction rate.</p>
+      monthly LLM bill to see the annualized impact at our measured reduction rate (routing alone;
+      repeat traffic saves more via the cache).</p>
 
     <div class="calc card">
       <div class="calcrow">
@@ -279,8 +282,8 @@
       </div>
       <div class="calcout">
         <div class="calclabel">Estimated annual savings</div>
-        <div class="calcbig" id="annual">$97,200</div>
-        <div class="calcrange" id="range">about $86,400 – $104,400 / year (measured 72–87% range)</div>
+        <div class="calcbig" id="annual">$78,000</div>
+        <div class="calcrange" id="range">about $66,000 – $96,000 / year (~65% routing; up to ~80% with cache)</div>
       </div>
     </div>
 
@@ -288,14 +291,14 @@
       model at roughly <strong>$0.02 per request</strong> (a support-style answer with context):</p>
     <table>
       <tr><th>Organization</th><th>LLM requests / mo</th><th>All-premium spend / yr</th><th>Projected annual savings</th></tr>
-      <tr><td>Early-stage AI app</td><td class="r">500K</td><td class="r">$120K</td><td class="v">~$97K</td></tr>
-      <tr><td>Growth-stage AI SaaS</td><td class="r">5M</td><td class="r">$1.2M</td><td class="v">~$972K</td></tr>
-      <tr><td>Enterprise AI platform</td><td class="r">50M</td><td class="r">$12M</td><td class="v">~$9.7M</td></tr>
+      <tr><td>Early-stage AI app</td><td class="r">500K</td><td class="r">$120K</td><td class="v">~$78K</td></tr>
+      <tr><td>Growth-stage AI SaaS</td><td class="r">5M</td><td class="r">$1.2M</td><td class="v">~$780K</td></tr>
+      <tr><td>Enterprise AI platform</td><td class="r">50M</td><td class="r">$12M</td><td class="v">~$7.8M</td></tr>
     </table>
     <p class="fine">Illustrative projections: monthly requests × ~$0.02/request premium pricing ×
-      our measured <strong>~81% reduction</strong> (72–87% range, see methodology). Actual savings
+      our measured <strong>~65% routing reduction</strong> (see methodology). Actual savings
       depend on your models, answer lengths, and traffic mix — high-repeat traffic saves more via
-      the cache; substantive long-form saves more via routing. Not a guarantee.</p>
+      the cache (blended 80%+); substantive long-form saves more via routing. Not a guarantee.</p>
   </section>
 
   <section id="controlplane">
@@ -446,9 +449,9 @@ document.getElementById("yr").textContent = new Date().getFullYear();
   function calc() {
     const monthly = Math.max(0, Number(spendEl.value) || 0);
     const yearly = monthly * 12;
-    document.getElementById("annual").textContent = fmt(yearly * 0.81);
+    document.getElementById("annual").textContent = fmt(yearly * 0.65);
     document.getElementById("range").textContent =
-      "about " + fmt(yearly * 0.72) + " – " + fmt(yearly * 0.87) + " / year (measured 72–87% range)";
+      "about " + fmt(yearly * 0.55) + " – " + fmt(yearly * 0.80) + " / year (~65% routing; up to ~80% with cache)";
   }
   spendEl.addEventListener("input", calc);
   calc();
