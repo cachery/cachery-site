@@ -215,8 +215,8 @@
   <div class="fine">Measured as the mean of 3 runs over a 547-question support benchmark, graded by an independent
     Claude Opus judge on a "correct &amp; helpful" bar. Routing alone cuts cost ~77%; with repeat
     traffic, the cache pushes blended savings past 90%. The 86% is held down by ~12% of questions
-    no model can answer without the customer's own data; on answerable questions it's ~92%, and with
-    curated-FAQ + quality-gated caching the measured blended quality is ~96%. Results vary by traffic — see methodology.</div>
+    that need the customer's own data to answer; on answerable questions it's ~92%, and with
+    curated-FAQ + quality-gated caching the measured blended quality on that set is ~96%. Results vary by traffic — see methodology.</div>
 
   <section id="problem">
     <div class="eyebrow">The problem</div>
@@ -266,18 +266,20 @@
       <tr><td>Blended savings with cache</td><td class="v">up to ~90%</td><td class="r">repeat traffic</td></tr>
       <tr><td>Answer quality (correct &amp; helpful)</td><td class="v">~86%</td><td class="r">full set, Opus-judged</td></tr>
       <tr><td>Answer quality, answerable questions</td><td class="v">~92%</td><td class="r">≈93% of the ceiling</td></tr>
-      <tr><td>Blended quality (curated FAQ + cache)</td><td class="v">~96%</td><td class="r">measured, what users receive</td></tr>
+      <tr><td>Blended quality (curated FAQ + cache)</td><td class="v">~96%</td><td class="r">answerable set, Zipf FAQ-heavy stream</td></tr>
+      <tr><td>Answers worse than premium</td><td class="v">~7%</td><td class="r">—</td></tr>
     </table>
     <p class="fine">Honest notes: ~77% is cost-routing alone on all-unique traffic (the worst
       case); cached repeats are free, so blended savings climb past 90% as traffic repeats.
-      About 12% of the benchmark questions can't be answered without the customer's own product
-      data — even an all-premium model only hedges — so the full-set 86% understates routing; on
-      the answerable set it's ~92% (≈93% of the best any model achieves). The cache admits only
-      <em>proven</em> answers (verified, escalated, or curated — never an unverified cheap draft),
-      so a cache hit is never worse than a fresh route; with curated-FAQ warming, the
-      <strong>measured</strong> blended quality is ~96%. Two presets — max-savings (~77%/~86%) and
-      near-premium (~97% quality) — let you pick the trade-off. Multi-turn conversations supported.
-      Quality is specific to the stated bar and judge. Full methodology available on request.</p>
+      About 12% of the benchmark questions can't be answered factually without the customer's own
+      product data — an all-premium model only hedges — so the full-set 86% understates the routing
+      quality; on the answerable set it's ~92% (≈93% of what the all-premium Opus 4.8 baseline
+      achieves). The cache admits only <em>proven</em> answers (verified, escalated, or curated —
+      never an unverified cheap draft), so a cache hit is never worse than a fresh route; with
+      curated-FAQ warming, the <strong>measured</strong> blended quality on that answerable set is
+      ~96%. Two presets — max-savings (~77% savings, ~92% answerable quality) and near-premium (~97%
+      on the same set, near-all-premium cost) — let you pick the trade-off. Multi-turn conversations
+      supported. Quality is specific to the stated bar and judge. Full methodology available on request.</p>
   </section>
 
   <section id="savings">
