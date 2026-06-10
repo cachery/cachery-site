@@ -11,9 +11,9 @@
 <style>
   /* Wordmark face, self-hosted (no third-party font CDN — the product pitch is
      "your traffic stays yours"; the landing page should live by it too).
-     Space Grotesk Bold, OFL license. */
-  @font-face{font-family:"Space Grotesk";font-style:normal;font-weight:700;font-display:swap;
-    src:url("space-grotesk-700.woff2") format("woff2")}
+     Outfit Bold, OFL license. */
+  @font-face{font-family:"Outfit";font-style:normal;font-weight:700;font-display:swap;
+    src:url("outfit-700.woff2") format("woff2")}
   :root{
     --bg:#0e1217; --panel:#161d27; --panel2:#1f2835; --line:#283341;
     --text:#e9eef4; --muted:#8b97a7; --green:#3fb950; --green2:#2ea043;
@@ -32,16 +32,16 @@
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
   .mono{font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
 
-  /* logos — the wordmark gets its own face (Space Grotesk) so "Cachet" reads
+  /* logos — the wordmark gets its own face (Outfit) so "Cachet" reads
      as a brand, not body text */
-  .logo{display:inline-flex;align-items:center;gap:11px;font-family:"Space Grotesk",ui-sans-serif,system-ui,sans-serif;
-    font-weight:700;letter-spacing:.015em;font-size:20px}
+  .logo{display:inline-flex;align-items:center;gap:11px;font-family:"Outfit",ui-sans-serif,system-ui,sans-serif;
+    font-weight:700;letter-spacing:.01em;font-size:20px;flex-shrink:0}
   .logo svg{width:30px;height:30px;display:block;filter:drop-shadow(0 2px 7px rgba(0,0,0,.45))}
   .seal{width:28px;height:28px;vertical-align:-8px;filter:drop-shadow(0 2px 6px rgba(0,0,0,.4))}
 
-  /* nav — explicit gap so the wordmark never crowds the nav buttons,
-     whatever the window width */
-  nav{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;padding:20px 0}
+  /* nav — single line always (no wrap); the explicit gap guarantees space
+     between the wordmark and the nav buttons at any window width */
+  nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px 0}
   .navlinks{display:flex;gap:10px;align-items:center}
   .btn{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#06210d;font-weight:670;
     padding:11px 18px;border-radius:10px;font-size:14px;border:1px solid transparent;transition:.15s}
