@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" role="img" aria-label="Cachet">
-  <!-- Cachet: a "C" echo monogram — concentric open arcs = cache reuse + the letter C. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" role="img" aria-label="Cachery">
+  <!-- Cachery: a "C" echo monogram — concentric open arcs = cache reuse + the letter C. -->
   <defs>
     <linearGradient id="cg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#5fe07a"/><stop offset="1" stop-color="#1f8b37"/>

@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Cachet — the self-hosted LLM cost &amp; governance gateway</title>
-<meta name="description" content="Cachet: a self-hosted control plane for LLM traffic — cuts spend with semantic caching and quality-gated routing, plus budgets, PII guardrails, and continuous quality monitoring. Production-hardened." />
+<title>Cachery — the self-hosted LLM cost &amp; governance gateway</title>
+<meta name="description" content="Cachery: a self-hosted control plane for LLM traffic — cuts spend with semantic caching and quality-gated routing, plus budgets, PII guardrails, and continuous quality monitoring. Production-hardened." />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-<!-- Brand: Cachet (company + product). Fill remaining [bracketed] placeholders
+<!-- Brand: Cachery (company + product). Fill remaining [bracketed] placeholders
      (contact email, domain) before publishing. -->
 <style>
   /* Site face, self-hosted (no third-party font CDN — the product pitch is
@@ -32,7 +32,7 @@
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
   .mono{font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
 
-  /* logos — the wordmark gets its own face (Outfit) so "Cachet" reads
+  /* logos — the wordmark gets its own face (Outfit) so "Cachery" reads
      as a brand, not body text */
   .logo{display:inline-flex;align-items:center;gap:11px;font-family:"Outfit",ui-sans-serif,system-ui,sans-serif;
     font-weight:700;letter-spacing:.01em;font-size:20px;flex-shrink:0}
@@ -133,25 +133,7 @@
 
 <!-- reusable logo marks -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="mark-ballast" viewBox="0 0 40 40">
-    <defs>
-      <linearGradient id="bTop" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#5fe07a"/><stop offset="1" stop-color="#33ab4d"/>
-      </linearGradient>
-      <linearGradient id="bBot" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#249a3f"/><stop offset="1" stop-color="#136a2a"/>
-      </linearGradient>
-      <clipPath id="bclipS"><circle cx="20" cy="20" r="16"/></clipPath>
-    </defs>
-    <circle cx="20" cy="20" r="16" fill="url(#bTop)"/>
-    <g clip-path="url(#bclipS)">
-      <rect x="4" y="21" width="32" height="16" fill="url(#bBot)"/>
-      <ellipse cx="20" cy="13.5" rx="11" ry="6" fill="#ffffff" opacity="0.12"/>
-      <rect x="4" y="20" width="32" height="2.1" fill="#eafff0" opacity="0.95"/>
-    </g>
-    <circle cx="20" cy="20" r="16" fill="none" stroke="#0d1117" stroke-opacity="0.18" stroke-width="1.5"/>
-  </symbol>
-  <symbol id="mark-cachet" viewBox="0 0 40 40">
+  <symbol id="mark-cachery" viewBox="0 0 40 40">
     <defs>
       <linearGradient id="cgrad" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0" stop-color="#5fe07a"/><stop offset="1" stop-color="#1f8b37"/>
@@ -170,7 +152,7 @@
 
 <div class="wrap">
   <nav>
-    <span class="logo"><svg><use href="#mark-cachet"/></svg> Cachet</span>
+    <span class="logo"><svg><use href="#mark-cachery"/></svg> Cachery</span>
     <div class="navlinks">
       <a class="btn ghost" href="#how">How it works</a>
       <a class="btn" href="#contact">Request access</a>
@@ -181,10 +163,10 @@
     <div>
       <div class="tag"><span class="pulse"></span> Now onboarding design partners</div>
       <h1>The LLM cost gateway <span class="hl">you run yourself</span>.</h1>
-      <p class="sub"><strong>Cachet</strong> cuts your LLM bill <strong>77–90%</strong> with semantic
+      <p class="sub"><strong>Cachery</strong> cuts your LLM bill <strong>77–90%</strong> with semantic
         caching and quality-gated routing — and <strong>measures</strong> that quality held — entirely
         inside your own infrastructure. Hosted routers make you send every prompt to a third party and
-        <em>bet</em> on which model is best. Cachet runs in your environment, <strong>verifies every
+        <em>bet</em> on which model is best. Cachery runs in your environment, <strong>verifies every
         answer</strong>, and shows its work.</p>
       <div class="cta-row">
         <a class="btn" href="#contact">Request early access</a>
@@ -195,7 +177,7 @@
     <div class="chartcard">
       <div class="ct">Cumulative LLM spend</div>
       <div class="cs">As traffic grows, spend stays flat — the gap is your savings.</div>
-      <svg viewBox="0 0 440 240" width="100%" role="img" aria-label="Spend without the gateway rises steeply; with Cachet it stays nearly flat.">
+      <svg viewBox="0 0 440 240" width="100%" role="img" aria-label="Spend without the gateway rises steeply; with Cachery it stays nearly flat.">
         <defs>
           <linearGradient id="gap" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stop-color="#3fb950" stop-opacity="0.30"/>
@@ -209,13 +191,13 @@
         <path d="M44,196 L130,158 L216,120 L302,78 L412,40 L412,168 L302,176 L216,183 L130,191 Z" fill="url(#gap)"/>
         <!-- projected (all-premium) -->
         <polyline points="44,196 130,158 216,120 302,78 412,40" fill="none" stroke="#d6953a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        <!-- with Cachet -->
+        <!-- with Cachery -->
         <polyline points="44,196 130,191 216,183 302,176 412,168" fill="none" stroke="#3fb950" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
         <text x="220" y="151" fill="#3fb950" font-size="15" font-weight="700" font-family="system-ui" text-anchor="middle">≈ 80% saved</text>
       </svg>
       <div class="legend">
         <span><i style="background:#d6953a"></i>Projected (all-premium)</span>
-        <span><i style="background:#3fb950"></i>With Cachet</span>
+        <span><i style="background:#3fb950"></i>With Cachery</span>
       </div>
     </div>
   </header>
@@ -236,12 +218,12 @@
     <h2>Your AI usage is growing. So is the bill.</h2>
     <p class="lead">LLM spend scales with usage and eats your gross margin. The obvious fix —
       routing to cheaper models or caching answers — quietly risks shipping worse answers to your
-      users. Most tools cut cost and just <em>hope</em> quality holds. Cachet measures it.</p>
+      users. Most tools cut cost and just <em>hope</em> quality holds. Cachery measures it.</p>
   </section>
 
   <section id="how">
     <div class="eyebrow">The product</div>
-    <h2><svg class="seal"><use href="#mark-cachet"/></svg> Meet Cachet</h2>
+    <h2><svg class="seal"><use href="#mark-cachery"/></svg> Meet Cachery</h2>
     <p class="lead">Point your app at one endpoint (OpenAI-compatible — change one base URL).
       It runs in <em>your</em> environment, and three things make it safe to trust:</p>
     <div class="grid3">
@@ -255,7 +237,7 @@
       <div class="card">
         <div class="k">2 · Verified, not predicted</div>
         <h3>A quality floor per request</h3>
-        <p>Hosted routers <em>guess</em> which model will be best. Cachet drafts cheap,
+        <p>Hosted routers <em>guess</em> which model will be best. Cachery drafts cheap,
           <strong>verifies the actual answer</strong>, and escalates to a stronger model only when
           it isn't good enough — a measured floor on every request, not a bet. Repeats are then
           served from a quality-gated cache, never worse than a fresh route.</p>
@@ -276,7 +258,7 @@
     <p class="lead">Sending every prompt to a hosted router means a third party sees all of it — and
       you're trusting their <em>prediction</em> of quality with no per-request safety net. For
       healthcare, fintech, legal, or anyone under a compliance regime, that's a non-starter.</p>
-    <p class="lead">Cachet inverts it: the gateway runs in <strong>your</strong> environment, the cache
+    <p class="lead">Cachery inverts it: the gateway runs in <strong>your</strong> environment, the cache
       and the spend data stay with <strong>you</strong>, and every cheap answer is
       <strong>verified before it's served</strong>. You get the savings of routing <em>and</em> the
       savings of caching, with quality you can audit — without handing your data to anyone.</p>
@@ -346,7 +328,7 @@
   <section id="controlplane">
     <div class="eyebrow">More than savings</div>
     <h2>The control plane for your LLM traffic</h2>
-    <p class="lead">Every prompt already flows through Cachet — so every concern about that
+    <p class="lead">Every prompt already flows through Cachery — so every concern about that
       traffic becomes one place to manage it. You land with cost savings and get governance,
       safety, and quality assurance in the same gateway.</p>
     <div class="grid3">
@@ -374,7 +356,7 @@
   <section id="vendors">
     <div class="eyebrow">Vendor-agnostic</div>
     <h2>Gemini, Claude, and OpenAI — one gateway</h2>
-    <p class="lead">Most teams already run more than one model provider. Cachet sits in front of all
+    <p class="lead">Most teams already run more than one model provider. Cachery sits in front of all
       of them through one OpenAI-compatible endpoint — so the cache, budgets, guardrails, and quality
       checks apply to <em>every</em> vendor's traffic, not just one.</p>
     <div class="grid3">
@@ -405,7 +387,7 @@
   <section id="production">
     <div class="eyebrow">Production-ready</div>
     <h2>Built to run in production — inside your environment</h2>
-    <p class="lead">Cachet is <strong>self-hosted</strong>: it runs in your own infrastructure, so your
+    <p class="lead">Cachery is <strong>self-hosted</strong>: it runs in your own infrastructure, so your
       prompts never leave your boundary. It's hardened, observable, and tested — not a prototype.</p>
     <div class="grid3">
       <div class="card">
@@ -441,7 +423,7 @@
       <div class="card">
         <div class="k">Drop-in</div>
         <h3>One base-URL change</h3>
-        <p>OpenAI-compatible API — point your existing client at Cachet and you're live, with no SDK
+        <p>OpenAI-compatible API — point your existing client at Cachery and you're live, with no SDK
           changes.</p>
       </div>
     </div>
@@ -457,7 +439,7 @@
     <p class="lead">Not just one workload: on support-style benchmarks across
       <strong>e-commerce, fintech, travel, healthcare admin, and telecom</strong> (370 questions,
       3 independent runs, Opus-judged), the same routing held <strong>~94% quality at ~83%
-      savings</strong> — the <a href="https://github.com/Philife/cachet-eval" style="color:var(--blue)">dataset
+      savings</strong> — the <a href="https://github.com/Philife/cachery-eval" style="color:var(--blue)">dataset
       and judge are public</a>, so you can re-run the numbers yourself.</p>
   </section>
 
@@ -468,7 +450,7 @@
       <div class="big">You pay a share of the <span class="g">savings we can prove</span>.</div>
       <div class="pgrid">
         <div><h4>No savings, no fee</h4>
-          <p>If Cachet doesn't cut your bill, you don't pay. Incentives aligned.</p></div>
+          <p>If Cachery doesn't cut your bill, you don't pay. Incentives aligned.</p></div>
         <div><h4>Measured on your traffic</h4>
           <p>Savings are proven against your real requests, with a quality floor you set.</p></div>
         <div><h4>Self-hosted</h4>
@@ -481,7 +463,7 @@
   <section id="trust">
     <div class="eyebrow">Trust &amp; data</div>
     <h2>We sit in your request path — we treat it seriously</h2>
-    <p class="lead">Because Cachet is self-hosted, your prompts never leave your environment — they're
+    <p class="lead">Because Cachery is self-hosted, your prompts never leave your environment — they're
       only retained in the cache you control, and we don't train on your data. A pilot
       data-processing agreement is available. We're early-stage and transparent about it — formal
       certifications (e.g. SOC 2) are on the roadmap, not yet in place.
@@ -512,16 +494,16 @@
     <div class="eyebrow" style="text-align:center">Get in touch</div>
     <h2 style="justify-content:center">Request early access</h2>
     <p class="lead" style="margin:0 auto 24px">We're onboarding a small cohort of design partners.
-      If your LLM bill is growing and your data can't leave, let's talk — self-host Cachet, or run a
+      If your LLM bill is growing and your data can't leave, let's talk — self-host Cachery, or run a
       measured pilot against your own traffic. You keep every prompt.</p>
-    <a class="btn" href="mailto:[your-email@yourdomain.com]?subject=Cachet%20%E2%80%94%20early%20access">[your-email@yourdomain.com]</a>
+    <a class="btn" href="mailto:[your-email@yourdomain.com]?subject=Cachery%20%E2%80%94%20early%20access">[your-email@yourdomain.com]</a>
   </section>
 </div>
 
 <footer>
-  <span class="logo"><svg style="color:var(--text)"><use href="#mark-cachet"/></svg> Cachet</span>
-  <div><strong>Cachet</strong> — the self-hosted LLM cost &amp; governance gateway. Cut cost, keep quality, prove it.</div>
-  <div style="margin-top:8px">© <span id="yr"></span> Cachet. Benchmark figures are from a controlled test set; results vary by workload.</div>
+  <span class="logo"><svg style="color:var(--text)"><use href="#mark-cachery"/></svg> Cachery</span>
+  <div><strong>Cachery</strong> — the self-hosted LLM cost &amp; governance gateway. Cut cost, keep quality, prove it.</div>
+  <div style="margin-top:8px">© <span id="yr"></span> Cachery. Benchmark figures are from a controlled test set; results vary by workload.</div>
 </footer>
 <script>
 document.getElementById("yr").textContent = new Date().getFullYear();
