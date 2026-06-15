@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Cachery — the self-hosted LLM cost &amp; governance gateway</title>
-<meta name="description" content="Cachery: a self-hosted control plane for LLM traffic — cuts spend with semantic caching and quality-gated routing, plus budgets, PII guardrails, and continuous quality monitoring. Production-hardened." />
+<title>Cachery — verified LLM cost savings you can prove</title>
+<meta name="description" content="Cachery cuts LLM spend ~77% by verifying every cheap answer before it ships and escalating only when it must — not by predicting. Self-hosted, runs in front of the gateway you already have (Portkey, LiteLLM, or direct), and every claim is reproducible on your own keys." />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <!-- Brand: Cachery (company + product). Fill remaining [bracketed] placeholders
      (contact email, domain) before publishing. -->
@@ -353,32 +353,32 @@
   </section>
 
   <section id="vendors">
-    <div class="eyebrow">Vendor-agnostic</div>
-    <h2>Gemini, Claude, and OpenAI — one gateway</h2>
-    <p class="lead">Most teams already run more than one model provider. Cachery sits in front of all
-      of them through one OpenAI-compatible endpoint — so the cache, budgets, guardrails, and quality
-      checks apply to <em>every</em> vendor's traffic, not just one.</p>
+    <div class="eyebrow">Works with your stack</div>
+    <h2>Keep the gateway you already run</h2>
+    <p class="lead">There are two kinds of "routing." Gateways like <strong>Portkey</strong> and
+      <strong>LiteLLM</strong> handle <em>transport</em> — keys, failover, provider breadth. Cachery
+      owns the <em>decision</em>: it verifies the cheap answer before it ships and escalates only when
+      it must. They compose — point Cachery's tiers at the gateway you already have, or run direct.</p>
     <div class="grid3">
       <div class="card">
-        <div class="k">One endpoint, every vendor</div>
-        <h3>Cache across providers</h3>
-        <p>Keep using any model — Claude, GPT, Gemini, or open models. A repeated question is served
-          free <em>whichever vendor</em> would have answered it, and all your spend lands on one bill
-          with per-team attribution.</p>
+        <div class="k">Already on Portkey / LiteLLM?</div>
+        <h3>Layer on top — don't rip it out</h3>
+        <p>Cachery sits in front and makes your existing gateway <strong>provably cheaper</strong>:
+          it makes the verified cost/quality call while your gateway keeps handling transport,
+          failover, and 100+ providers. Turn off its routing and cache; keep its rails.</p>
       </div>
       <div class="card">
-        <div class="k">Cross-provider routing</div>
-        <h3>Cheapest model that's good enough</h3>
-        <p>Each rung of the cascade — draft, mid, premium — can be any vendor's model. Mix freely
-          (say, a Gemini Flash draft and a Claude premium backstop) and let the gateway serve the
-          cheapest model that clears the quality bar.</p>
+        <div class="k">No gateway yet?</div>
+        <h3>Cachery is also the gateway</h3>
+        <p>One OpenAI-compatible endpoint across Claude, GPT, Gemini, or open models. Each cascade
+          rung — draft, mid, premium — can be any vendor, so you serve the cheapest model that
+          actually clears the quality bar.</p>
       </div>
       <div class="card">
         <div class="k">No lock-in</div>
         <h3>Swap models in config</h3>
-        <p>Change a provider or rebalance tiers without touching your app. As pricing and models
-          shift you re-route in one line — and the same measured-quality checks keep cost cuts
-          honest across every provider.</p>
+        <p>Change a provider or rebalance tiers without touching your app — re-route in one line. The
+          same verified-quality checks keep the cost cuts honest across every provider.</p>
       </div>
     </div>
   </section>
@@ -435,10 +435,13 @@
       copilot</strong> with high-volume, repetitive, customer-facing questions — where the LLM bill
       is a top cost line and a wrong answer actually matters. That's exactly where caching saves the
       most and where "measured quality" is worth paying for.</p>
+    <p class="lead"><strong>Less of a fit:</strong> ultra-low-latency or real-time autocomplete, where
+      every millisecond dominates — verifying an answer before serving trades a little latency for a
+      correctness guarantee. Worth it when a wrong answer costs more than ~200ms; not when it doesn't.</p>
     <p class="lead">Not just one workload: on support-style benchmarks across
       <strong>e-commerce, fintech, travel, healthcare admin, and telecom</strong> (370 questions,
       3 independent runs, Opus-judged), the same routing held <strong>~94% quality at ~83%
-      savings</strong> — the <a href="https://github.com/Philife/cachery-eval" style="color:var(--blue)">dataset
+      savings</strong> — the <a href="https://github.com/cachery/cachery-eval" style="color:var(--blue)">dataset
       and judge are public</a>, so you can re-run the numbers yourself.</p>
   </section>
 
@@ -450,8 +453,9 @@
       <div class="pgrid">
         <div><h4>No savings, no fee</h4>
           <p>If Cachery doesn't cut your bill, you don't pay. Incentives aligned.</p></div>
-        <div><h4>Measured on your traffic</h4>
-          <p>Savings are proven against your real requests, with a quality floor you set.</p></div>
+        <div><h4>Quality-parity guarantee</h4>
+          <p>Savings are proven against your real requests and held to a quality floor you set — miss
+            the bar and you don't pay. A free gateway can't promise that.</p></div>
         <div><h4>Self-hosted</h4>
           <p>Runs in your environment — prompts never leave your boundary.</p></div>
       </div>
