@@ -169,7 +169,7 @@
         LiteLLM, or direct), and every claim is <strong>reproducible on your keys</strong>.</p>
       <div class="cta-row">
         <a class="btn" href="#proof">Run the benchmark on your own prompts →</a>
-        <a class="btn ghost" href="#contact">Request early access</a>
+        <a class="btn ghost" href="#shadow">…or watch it on your live traffic, risk-free →</a>
       </div>
     </div>
 
@@ -291,6 +291,44 @@
       supported. Quality is specific to the stated bar and judge. Full methodology available on request.</p>
   </section>
 
+  <section id="shadow">
+    <div class="eyebrow">Prove it — risk-free</div>
+    <h2>See your savings on your own traffic — without changing what you serve</h2>
+    <p class="lead">Our benchmark is reproducible on your keys. But you don't have to take our
+      corpus, or even route a single real request through Cachery to find out what it would do for
+      <em>you</em>. Mirror a copy of your live traffic and Cachery measures it on the side —
+      your users keep getting the exact answers they get today.</p>
+    <div class="grid3">
+      <div class="card">
+        <div class="k">Mirror, don't migrate</div>
+        <h3>Your production path is untouched</h3>
+        <p>Tee a copy of your live requests to Cachery's shadow endpoint. It runs each one through
+          the real cascade <strong>out-of-band</strong> and never serves the result — your app keeps
+          using whatever it uses today. Zero risk to a single user, no integration to roll back.</p>
+      </div>
+      <div class="card">
+        <div class="k">Measured on your prompts</div>
+        <h3>Your numbers, independently judged</h3>
+        <p>You get an audit on <em>your</em> traffic: what it would have cost vs. all-premium, at what
+          quality — graded by an independent Claude Opus judge, with the cheap answer and the premium
+          answer side by side for every prompt. Not our benchmark. Yours.</p>
+      </div>
+      <div class="card">
+        <div class="k">Same engine as the benchmark</div>
+        <h3>Reproducible by construction</h3>
+        <p>The shadow audit runs the identical serving pipeline as our public benchmark — they share
+          the same code, so a shadow run and a file-based run on the same prompts produce the same
+          numbers. Nothing to fake; you can re-run it yourself.</p>
+      </div>
+    </div>
+    <p class="fine">Shadow mode is opt-in and self-hosted like everything else — the mirrored prompts
+      never leave your environment. It samples a configurable fraction of traffic to bound cost, since
+      measuring a prompt means actually running the cheap cascade on it.</p>
+    <div class="cta-row" style="margin-top:24px">
+      <a class="btn" href="#contact">Start a shadow audit on your traffic →</a>
+    </div>
+  </section>
+
   <section id="savings">
     <div class="eyebrow">Annual impact</div>
     <h2>What cutting your LLM bill 77–90% is worth in a year</h2>
@@ -363,9 +401,10 @@
       <div class="card">
         <div class="k">Already on Portkey / LiteLLM?</div>
         <h3>Layer on top — don't rip it out</h3>
-        <p>Cachery sits in front and makes your existing gateway <strong>provably cheaper</strong>:
-          it makes the verified cost/quality call while your gateway keeps handling transport,
-          failover, and 100+ providers. Turn off its routing and cache; keep its rails.</p>
+        <p>Cachery makes the verified cost/quality decision, then hands the actual call to the gateway
+          you already run — point any cascade tier at a <strong>Portkey virtual key or a LiteLLM
+          model</strong> in one config line. You keep your keys, failover, and 100+ providers; you add
+          a measured quality floor and provable savings on top.</p>
       </div>
       <div class="card">
         <div class="k">No gateway yet?</div>
@@ -479,6 +518,10 @@
     <dl class="faq">
       <dt>How hard is it to integrate?</dt>
       <dd>It's an OpenAI-compatible endpoint — typically a one-line base-URL change.</dd>
+      <dt>Can I see the savings on my own traffic before integrating?</dt>
+      <dd>Yes — shadow mode. Mirror a copy of your live requests and Cachery measures what it would
+        have cost and at what quality, out-of-band, without serving those answers. Your production
+        path doesn't change, and the audit is graded by an independent judge on your own prompts.</dd>
       <dt>Will it serve a wrong cached answer for a similar question?</dt>
       <dd>No — a reranker confirms true equivalence before any cache hit, and we measure the
         false-hit rate (near zero in our benchmark).</dd>
